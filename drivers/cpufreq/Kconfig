@@ -109,6 +109,42 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 	  loading your cpufreq low-level hardware driver, using the
 	  'interactive' governor for latency-sensitive workloads.
 
+config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
+	bool "bioshock"
+	select CPU_FREQ_GOV_BIOSHOCK
+	help
+	  Use bioshock as the default CPU governor.
+
+config CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE
+	bool "intelliactive"
+	select CPU_FREQ_GOV_INTELLIACTIVE
+	help
+	  Use intelliactive as the default CPU governor.
+
+config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND2
+	bool "intellidemand2"
+	select CPU_FREQ_GOV_INTELLIDEMAND2
+	help
+	  Use intellidemand2 as the default CPU governor.
+
+config CPU_FREQ_DEFAULT_GOV_WHEATLEY
+	bool "wheatley"
+	select CPU_FREQ_GOV_WHEATLEY
+	help
+	  Use wheatley as the default CPU governor.
+
+config CPU_FREQ_DEFAULT_GOV_LIONHEART
+	bool "lionheart"
+	select CPU_FREQ_GOV_LIONHEART
+	help
+	  Use lionheart as the default CPU governor.
+
+config CPU_FREQ_DEFAULT_GOV_ONDEMANDPLUS
+	bool "ondemandplus"
+	select CPU_FREQ_GOV_ONDEMANDPLUS
+	help
+	  Use ondemandplus as the default CPU governor.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -205,6 +241,42 @@ config CPU_FREQ_GOV_CONSERVATIVE
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N.
+
+config CPU_FREQ_GOV_BIOSHOCK
+	tristate "'bioshock' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'bioshock' CPU governor.
+
+config CPU_FREQ_GOV_INTELLIDEMAND2
+	tristate "'intellidemand2' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'intellidemand2' CPU governor.
+
+config CPU_FREQ_GOV_INTELLIACTIVE
+	tristate "'intelliactive' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'intelliactive' CPU governor.
+
+config CPU_FREQ_GOV_WHEATLEY
+	tristate "'wheatley' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'wheatley' CPU governor.
+
+config CPU_FREQ_GOV_ONDEMANDPLUS
+	tristate "'ondemandplus' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'ondemandplus' CPU governor.
+
+config CPU_FREQ_GOV_LIONHEART
+	tristate "'lionheart' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'lionheart' CPU governor.
 
 menu "x86 CPU frequency scaling drivers"
 depends on X86
