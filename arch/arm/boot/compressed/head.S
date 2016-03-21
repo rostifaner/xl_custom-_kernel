@@ -691,7 +691,7 @@ __fa526_cache_on:
 		mov	pc, r12
 
 __arm6_mmu_cache_on:
-                .arch armv6
+                .arch armv6 
 		mov	r12, lr
 		mov	r6, #CB_BITS | 0x12	@ U
 		bl	__setup_mmu
