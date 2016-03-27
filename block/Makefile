@@ -17,7 +17,6 @@ obj-$(CONFIG_IOSCHED_DEADLINE)	+= deadline-iosched.o
 obj-$(CONFIG_IOSCHED_CFQ)	+= cfq-iosched.o
 obj-$(CONFIG_IOSCHED_TEST)	+= test-iosched.o
 obj-$(CONFIG_IOSCHED_FIOPS)	+= fiops-iosched.o
-<<<<<<< HEAD
 obj-$(CONFIG_IOSCHED_BFQ)	+= bfq-iosched.o
 obj-$(CONFIG_IOSCHED_SIOPLUS)        += sioplus-iosched.o
 obj-$(CONFIG_IOSCHED_FIFO)	+= fifo-iosched.o
